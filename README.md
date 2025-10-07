@@ -65,6 +65,7 @@ Users should be able to:
 <!-- - Website - [Votre Nom](https://www.votre-site.com) -->
 - Frontend Mentor - [@ovvoso](https://www.frontendmentor.io/profile/ovvoso)
 - GitHub - [@ovvoso](https://github.com/ovvoso)
+- Teste - [@ovvoso](https://ovvoso.github.io/Formulaire-de-contact)
 
 ## Acknowledgments
 
@@ -84,7 +85,7 @@ Merci à Frontend Mentor pour ce défi stimulant qui m'a permis de perfectionner
 ### Installation
 ```bash
 # Cloner le repository
-git clone https://github.com/votrepseudo/Formulaire-de-contact.git
+git clone https://github.com/ovvoso/Formulaire-de-contact.git
 
 # Naviguer dans le dossier
 cd Formulaire-de-contact
