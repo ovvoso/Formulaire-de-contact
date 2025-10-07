@@ -1,0 +1,358 @@
+/* Import Local Fonts - Karla */
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* CSS Custom Properties - Frontend Mentor Style Guide */
+:root {
+  /* Primary Colors */
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+  
+  /* Typography */
+  --font-family: 'Karla', sans-serif;
+  --font-size-labels: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--green-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container */
+.container {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 736px;
+  position: relative;
+}
+
+/* Heading */
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2rem;
+  color: var(--grey-900);
+  letter-spacing: -1px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: var(--font-size-labels);
+  margin-bottom: 0.5rem;
+  color: var(--grey-900);
+}
+
+label span {
+  color: var(--green-600);
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--grey-500);
+  border-radius: 8px;
+  font-size: var(--font-size-labels);
+  font-family: var(--font-family);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-color: var(--green-600);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--green-600);
+}
+
+/* Error state */
+input.error,
+textarea.error {
+  border-color: var(--red);
+}
+
+/* Error messages */
+.error-message {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio-option {
+  border: 1px solid var(--grey-500);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--white);
+  position: relative;
+}
+
+.radio-option:hover {
+  border-color: var(--green-600);
+}
+
+.radio-option.selected {
+  background-color: var(--green-200);
+  border-color: var(--green-600);
+}
+
+.radio-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-500);
+  border-radius: 50%;
+  appearance: none;
+  position: relative;
+  margin: 0;
+}
+
+.radio-option input[type="radio"]:checked {
+  border-color: var(--green-600);
+  background-image: url('./assets/images/icon-radio-selected.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.radio-option span {
+  font-size: var(--font-size-labels);
+  color: var(--grey-900);
+}
+
+/* Checkbox */
+.checkbox {
+  margin-bottom: 2.5rem;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: var(--font-size-labels);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 2px solid var(--grey-500);
+  border-radius: 2px;
+  appearance: none;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: var(--green-600);
+  border-color: var(--green-600);
+  background-image: url('./assets/images/icon-checkbox-check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 9px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--green-600);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: hsl(169, 82%, 20%);
+}
+
+.submit-btn:focus {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+}
+
+/* Success Message */
+.success-message {
+  background-color: var(--grey-900);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: none;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.success-message.show {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 1;
+}
+
+.success-message h3 {
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success-message h3::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('./assets/images/icon-success-check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+.success-message p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive Design - Mobile First Approach */
+@media (max-width: 375px) {
+  body {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 1.5rem;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .contact-form h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .double {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .radio-group {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .success-message {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    position: fixed;
+    top: 1rem;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 376px) and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1440px) {
+  body {
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 736px;
+  }
+}
